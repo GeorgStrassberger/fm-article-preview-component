@@ -1,0 +1,40 @@
+/* Import font */
+
+:root {
+  --very-dark-blue: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --blue: hsl(212, 23%, 69%);
+  --light-blue: hsl(210, 46%, 95%);
+  --ff-manrope: "Manrope";
+  --fw-semibold: 500;
+  --fw-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 13px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
