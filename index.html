@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Article preview component</title>
@@ -12,21 +15,21 @@
 <body>
 
   <div class="card">
-    <!-- Header -->
+    <!-- CARD HEADER -->
     <div class="card-header">
       <picture>
         <img class="card-image" src="./assets/images/drawers.jpg" alt="drawers">
       </picture>
     </div>
 
-    <!-- Body -->
+    <!-- CARD BODY -->
     <div class="card-body">
-      <!-- first row -->
+      <!-- TITLE ROW -->
       <div class="card-title">
         Shift the overall look and feel by adding these wonderful
         touches to furniture in your home
       </div>
-      <!-- second row -->
+      <!-- CONTENT ROW -->
       <div class="card-content">
         <p>
           Ever been in a room and felt like something was missing? Perhaps
@@ -34,31 +37,43 @@
           to help you make any room feel complete.
         </p>
       </div>
-      <!-- third row -->
+
+      <!-- CREATOR ROW -->
       <div class="creator">
         <picture>
           <img class="creator-avatar" src="./assets/images/avatar-michelle.jpg" alt="avatar">
         </picture>
-        <!--  -->
+        <!-- INFO -->
         <div class="creator-info">
           <span class="creator-name">Michelle Appleton</span>
           <time class="creator-date" datetime="28.6.2020">
             28 Jun 2020
           </time>
         </div>
-        <!-- arrow svg missing -->
-        <div class="arrow-icon">
-          <i>-></i>
+
+        <div class="icon-container">
+          <!-- Hover Content -->
+          <div id="modal" class="modal">
+            <span>Share</span>
+            <i class="fa-brands fa-2x fa-square-facebook fa-color"></i>
+            <i class="fa-brands fa-2x fa-twitter fa-color"></i>
+            <i class="fa-brands fa-2x fa-pinterest fa-color"></i>
+            <div class="square"></div>
+          </div>
+          <!-- Share Icon -->
+          <i onclick="toggelModal()" class="fa fa-share icon-share" aria-hidden="true"></i>
         </div>
-      </div>
-      <!-- hovercontent -->
-      <div style="display: none;" class="modal">
-        Share
+
+
+
       </div>
 
     </div>
 
   </div>
+
+
+
 
   <footer>
     <div class="attribution">
@@ -66,6 +81,13 @@
       Coded by <a href="https://georg-strassberger.de">Georg Strassberger</a>.
     </div>
   </footer>
+
+  <script>
+    function toggelModal() {
+      const icon = document.getElementById('modal');
+      icon.classList.toggle('d-none');
+    }
+  </script>
 </body>
 
 </html>
