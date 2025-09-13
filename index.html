@@ -1,91 +1,134 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Frontend Mentor | Article preview component</title>
-</head>
-
-<body>
-
-  <div class="card">
-    <!-- CARD HEADER -->
-    <div class="card-header">
-      <picture>
-        <img class="card-image" src="./assets/images/drawers.jpg" alt="drawers">
-      </picture>
-    </div>
-
-    <!-- CARD BODY -->
-    <div class="card-body">
-      <!-- TITLE ROW -->
-      <div class="card-title">
-        Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home
-      </div>
-      <!-- CONTENT ROW -->
-      <div class="card-content">
-        <p>
-          Ever been in a room and felt like something was missing? Perhaps
-          it felt slightly bare and uninviting. I’ve got some simple tips
-          to help you make any room feel complete.
-        </p>
-      </div>
-
-      <!-- CREATOR ROW -->
-      <div class="creator">
+  <body>
+    <div class="card">
+      <!-- CARD HEADER -->
+      <div class="card-header">
         <picture>
-          <img class="creator-avatar" src="./assets/images/avatar-michelle.jpg" alt="avatar">
+          <img
+            class="card-image"
+            src="./assets/images/drawers.jpg"
+            alt="drawers"
+          />
         </picture>
-        <!-- INFO -->
-        <div class="creator-info">
-          <span class="creator-name">Michelle Appleton</span>
-          <time class="creator-date" datetime="28.6.2020">
-            28 Jun 2020
-          </time>
-        </div>
-
-        <div class="icon-container">
-          <!-- Hover Content -->
-          <div id="modal" class="modal d-none">
-            <span>Share</span>
-            <i class="fa-brands fa-2x fa-square-facebook fa-color"></i>
-            <i class="fa-brands fa-2x fa-twitter fa-color"></i>
-            <i class="fa-brands fa-2x fa-pinterest fa-color"></i>
-            <div class="square"></div>
-          </div>
-          <!-- Share Icon -->
-          <i onclick="toggelModal()" class="fa fa-share icon-share" aria-hidden="true"></i>
-        </div>
-
       </div>
 
+      <!-- CARD BODY -->
+      <div class="card-body">
+        <!-- TITLE ROW -->
+        <div class="card-title">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </div>
+        <!-- CONTENT ROW -->
+        <div class="card-content">
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
+
+        <!-- CREATOR ROW -->
+        <div class="creator">
+          <picture>
+            <img
+              class="creator-avatar"
+              src="./assets/images/avatar-michelle.jpg"
+              alt="avatar"
+            />
+          </picture>
+          <!-- INFO -->
+          <div class="creator-info">
+            <span class="creator-name">Michelle Appleton</span>
+            <time class="creator-date" datetime="28.6.2020"> 28 Jun 2020 </time>
+          </div>
+
+          <div class="icon-container">
+            <!-- Hover Content -->
+            <div id="modal" class="modal d-none">
+              <span>Share</span>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-2x fa-square-facebook fa-color"></i>
+              </a>
+              <a href="http://www.x.com/" target="_blank">
+                <i class="fa-brands fa-2x fa-twitter fa-color"></i>
+              </a>
+              <a href="https://de.pinterest.com/" target="_blank">
+                <i class="fa-brands fa-2x fa-pinterest fa-color"></i>
+              </a>
+              <div class="square"></div>
+            </div>
+            <!-- Share Icon -->
+            <i
+              onclick="toggelModal()"
+              class="fa fa-share icon-share"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Modal -->
+      <div id="mobile-modal" class="mobile-modal d-none">
+        <span>Share</span>
+        <a href="https://www.facebook.com/" target="_blank">
+          <i class="fa-brands fa-2x fa-square-facebook fa-color"></i>
+        </a>
+        <a href="http://www.x.com/" target="_blank">
+          <i class="fa-brands fa-2x fa-twitter fa-color"></i>
+        </a>
+        <a href="https://de.pinterest.com/" target="_blank">
+          <i class="fa-brands fa-2x fa-pinterest fa-color"></i>
+        </a>
+        <!-- Share Icon -->
+        <i
+          onclick="toggelModal()"
+          class="fa fa-share mobile-icon-share"
+          aria-hidden="true"
+        ></i>
+      </div>
     </div>
 
-  </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://georg-strassberger.de">Georg Strassberger</a>.
+      </div>
+    </footer>
 
-
-
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://georg-strassberger.de">Georg Strassberger</a>.
-    </div>
-  </footer>
-
-  <script>
-    function toggelModal() {
-      const icon = document.getElementById('modal');
-      icon.classList.toggle('d-none');
-    }
-  </script>
-</body>
-
+    <script>
+      function toggelModal() {
+        if (window.innerWidth > 768) {
+          const icon = document.getElementById("modal");
+          icon.classList.toggle("d-none");
+        } else {
+          const icon = document.getElementById("mobile-modal");
+          icon.classList.toggle("d-none");
+        }
+      }
+    </script>
+  </body>
 </html>
