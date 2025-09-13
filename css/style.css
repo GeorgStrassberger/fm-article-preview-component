@@ -39,6 +39,7 @@ body {
   background-color: var(--white);
   display: flex;
   flex-direction: row;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .card-image {
@@ -48,7 +49,7 @@ body {
   height: 100%;
   width: 17.8rem;
   object-fit: cover;
-  object-position: center center;
+  object-position: left center;
 }
 
 .card-body {
